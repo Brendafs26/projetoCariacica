@@ -1,15 +1,12 @@
 import React from 'react';
-import { View, Text, StyleSheet, Image,SafeAreaView } from 'react-native';
+import { View, Text, StyleSheet, Image,SafeAreaView,FlatList } from 'react-native';
 
 import { useNavigation } from '@react-navigation/native';
+import { FlatList } from 'react-native';
 
 
 export default function Home(){
     const navigation = useNavigation();
-  
-    function navegaDetalhes(){
-      navigation.navigate('Detalhes')
-    }
   
     return (
       <SafeAreaView style={styles.container}>
@@ -19,7 +16,8 @@ export default function Home(){
         source={require('./assets/cariacica.jpg')}
         />
         <Text> Terra Maravilhosa</Text>
-        <Text></Text>
+        <FlatList/>
+  
        </View>
        
       </SafeAreaView>

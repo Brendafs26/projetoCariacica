@@ -1,7 +1,10 @@
-
+import React from 'react';
 
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Feather from 'react-native-vector-icons/Feather';
+import Home from '../src/pages/Home';
+import Favoritos from '../src/pages/Favoritos';
+import Artistas from '../src/pages/Artistas';
 
 const Tab = createBottomTabNavigator();
 
@@ -23,7 +26,7 @@ export default function Routes(){
         >
           <Tab.Screen
             name="HomeStack"
-            component={StackRoutes}
+            component={Home}
             options={{
               tabBarIcon: ({ color, size }) => {
                 return <Feather name="home" color={color} size={size} />
@@ -32,8 +35,8 @@ export default function Routes(){
           />
   
           <Tab.Screen 
-            name="Sobre" 
-            component={Sobre} 
+            name="Favoritos" 
+            component={Favoritos} 
             options={{
               tabBarIcon: ({ color, size }) => {
                 return <Feather name="file-text" color={color} size={size} />
@@ -42,8 +45,8 @@ export default function Routes(){
           />
   
           <Tab.Screen
-            name="Contato"
-            component={Contato}
+            name="Artistas"
+            component={Artistas}
             options={{
               //headerShown: false,
               tabBarIcon: ({ color, size }) => {
