@@ -1,10 +1,12 @@
 import React from 'react';
 import { View, Text } from 'react-native';
 
-export default function Detalhes() {
- return (
-   <View>
-     <Text>Pagina Detalhes do usuario</Text>
-   </View>
+function FavoritosScreen() {
+  return (
+    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+      <Text>Início Screen</Text>
+    </View>
   );
 }
+
+export default FavoritosScreen;
